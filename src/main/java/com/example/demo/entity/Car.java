@@ -1,4 +1,4 @@
-package com.example.entity;
+package com.example.demo.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -15,8 +15,10 @@ public class Car {
 	private Integer service_number;
     private String mechanic;
     private String service;
+    
     @OneToOne(mappedBy ="car")
 	Customer customer;
+    
     public Customer getCustomer() {
 		return customer;
 	}

@@ -1,4 +1,4 @@
-package com.example.entity;
+package com.example.demo.entity;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
@@ -16,6 +16,7 @@ public class Customer {
     private String customer_name;
     private String car_name;
     private String salesperson;
+    
     @OneToOne(cascade = CascadeType.ALL)
   	@JoinColumn(name="car_id", referencedColumnName = "car_id")
   	Car car;

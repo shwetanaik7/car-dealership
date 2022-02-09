@@ -1,14 +1,11 @@
-package com.example.service;
+package com.example.demo.service;
 
 import java.util.Optional;
-
 import javax.validation.Valid;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import com.example.entity.Customer;
-import com.example.repository.CustomerRepository;
+import com.example.demo.repository.CustomerRepository;
+import com.example.demo.entity.Customer;
 
 @Service
 public class CustomerService {
@@ -25,6 +22,5 @@ public class CustomerService {
 
 	public void saveCustomer(@Valid Customer customer) {
 		customerRepository.save(customer);
-
 	}
 }

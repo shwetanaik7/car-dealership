@@ -1,20 +1,16 @@
-package com.example.service;
+package com.example.demo.service;
 
 import java.util.Optional;
-
 import javax.validation.Valid;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import com.example.entity.Car;
-import com.example.repository.CarRepository;
+import com.example.demo.entity.Car;
+import com.example.demo.repository.CarRepository;
 
 @Service
 public class CarService {
 	@Autowired
-    CarRepository carRepository;
-
+	CarRepository carRepository;
 
 	public Iterable<Car> getCars() {
 		return carRepository.findAll();
@@ -26,6 +22,5 @@ public class CarService {
 
 	public void saveCar(@Valid Car car) {
 		carRepository.save(car);
-		
 	}
 }
